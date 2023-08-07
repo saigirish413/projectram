@@ -1,0 +1,33 @@
+<div class="fluid-container">
+    <div class="container-body" >
+        <div class="button-container">
+            <button *ngIf="!progressbar" class="btn btn-primary centered-button" (click)="showProgress()">Start</button>
+        </div>
+    </div>
+    <div class="progress-container" *ngIf="progressbar && chevronDown">
+        <div class="progressbox row">
+            <div id="speech-bubble" class="col-1">
+                <fa-icon class="fa-2x header_icons" [icon]="faRocket"></fa-icon>
+            </div>
+            <div class="progressbar-container col-11">
+                <div class="row progressbar-text">
+                    <span class="col-8">Migrating data on selected environment</span>
+                    <span class=" col-4 text-end">{{progress}}</span>
+                    </div>
+                    <div class="progressbar">
+                <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+            </div>
+            </div>
+            <div class="showHideProgress">
+                <button *ngIf="chevronDown" type="button toggleButton" class="btn btn-default btn-sm" (click)="hideProgressbar()">
+                  <fa-icon class="toggle_progress" [icon]=" faChevronDown"></fa-icon>
+                  </button>
+          </div>
+        </div>
+  </div>
+  <div class="toggleUpButton">
+  <button  *ngIf="!chevronDown && progressbar" type="button " class="btn btn-default btn-sm" (click)="progressbarShow()">
+    <fa-icon class="toggle_progress_down" [icon]=" faChevronUp"></fa-icon>
+    </button>
+    </div>
+</div>

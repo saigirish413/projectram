@@ -1,0 +1,90 @@
+
+.button-container {
+  }
+  .container-body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 79vh;
+        margin: 0;
+        background-color: white;
+  }
+  .centered-button {
+    /* Add any button styling you want */
+  }
+  .progress-container {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+  }
+  #speech-bubble {
+    width: 50px; 
+    height: 50px; 
+    background: blue;
+    position: absolute;
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px;
+ }
+ #speech-bubble:after {
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid blue;
+    border-bottom: 10px solid transparent;
+    margin: 15px 0px 0px 35px;
+ }
+.progressbar{
+    margin-top: 1em;
+}
+.progressbar-container{
+    margin-left: 5em;
+}
+.progressbox{
+    border: 1px solid black;
+    width: 98%;
+    height: 50px;
+    margin-left: 1%;
+}
+.progressbar-text{
+    margin-top: 0.5em;
+}
+.header_icons{
+    color: white;
+    background: blue;
+    border-radius: 20%;
+    position: absolute;
+    margin-top: 0.35em;
+}
+.showHideProgress{
+    width: 3.5em;
+    height: 1.5em;
+    background: blue;
+    border-radius: 5% 5% 0 0;
+    position: absolute;
+    right: 1%;
+    bottom: 3.5em;
+}
+.toggle_progress{
+    color: white;
+    background: blue;
+    position: absolute;
+    margin: -11px 0px 0px -3px;
+}
+.toggle_progress_down{
+    color: white;
+    background: blue;
+    position: absolute;
+    margin: 0px 0px 0px -1em;
+    padding: 0px 1em;
+}
+.toggleUpButton{
+    position: absolute;
+    bottom: 0;
+    right: 0.75%;
+    z-index: 999;
+    padding: 1em;
+}
